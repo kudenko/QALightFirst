@@ -1,16 +1,9 @@
 package money;
 
-/**
- * Created by grey on 02.12.17.
- */
-public class Bitcoin extends Currency implements isFreelyConvertible {
+public class Bitcoin extends Currency {
 
-    public Bitcoin(double kursNBU, double rateBuy, double rateCell) {
-        super(kursNBU, rateBuy, rateCell);
-    }
-
-    public boolean getFreelyConvertible() {
-        return false;
+    public Bitcoin(double kursNBU, double rateBuy, double rateCell, String bitcoin) {
+        super(kursNBU, rateBuy, rateCell, bitcoin);
     }
 
     @Override

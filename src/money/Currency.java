@@ -7,11 +7,13 @@ abstract public class Currency {
     double rateBuy;
     double kursSell;
     double kursBuy;
+    String nameOfCurrency;
 
-    public Currency(double kursNBU, double rateBuy, double rateCell){
+    public Currency(double kursNBU, double rateBuy, double rateCell, String nameOfCurrency){
         this.kursNBU = kursNBU;
         this.rateBuy = rateBuy;
         this.rateCell = rateCell;
+        this.nameOfCurrency = nameOfCurrency;
         kursBuy = kursNBU * rateBuy;
         kursSell = kursNBU * rateCell;
     }
@@ -35,6 +37,8 @@ abstract public class Currency {
         updateKursSellAndBuy();
     }
 
+
+
     public double getRateCell() {
         return rateCell;
     }
@@ -55,12 +59,14 @@ abstract public class Currency {
 
         double tempResult;
         tempResult = hrn / kursBuy;
-        System.out.println("For " + hrn + " you get " + tempResult + " hrn");
+        System.out.println("For " + hrn + " hrn you get " + tempResult + " "  + nameOfCurrency);
         return tempResult;
     }
+
     public double exchangeCurrencyToHrn(int curr){
+
         double tempResult = curr * kursSell;
-        System.out.println("You got " + tempResult + " hrn for " + curr + " your currency");
+        System.out.println("You got " + tempResult + " hrn for " + curr + " " + nameOfCurrency);
         return tempResult;
     }
 

@@ -153,13 +153,13 @@ public class MainClass {
 
         //lesson 30.11
 
-        Dollar dollar = new Dollar(20, 1.15, 0.98);
+        Dollar dollar = new Dollar(20, 1.15, 0.98, "dollar");
 
         System.out.println(dollar.getKursNBU());
         dollar.setKursNBU(20);
         System.out.println(dollar.getKursNBU());
 
-        Euro euro = new Euro(31, 1.15, 0.95);
+        Euro euro = new Euro(31, 1.15, 0.95, "euro");
         System.out.println(euro.getKursNBU());
         euro.setKursNBU(36);
         System.out.println(euro.getKursNBU());
@@ -171,7 +171,7 @@ public class MainClass {
         dollar.exchangeHrnToCurrency(1000);
         dollar.exchangeCurrencyToHrn(100);
 
-        Bitcoin bitcoin = new Bitcoin(11000, 1.15, 0.88);
+        Bitcoin bitcoin = new Bitcoin(11000, 1.15, 0.88, "bitcoin");
         bitcoin.exchangeCurrencyToHrn(100);
         bitcoin.exchangeHrnToCurrency(200);
 
